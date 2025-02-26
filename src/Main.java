@@ -44,6 +44,22 @@ public class Main {
             acc1.withdraw(100); // Можливо, рахунок розблоковано
         }
 
+        Company company = new Company(10);
+
+        company.addEmployee(new Employee("Олександр", 5000, "Менеджмент", "Менеджер"));
+        company.addEmployee(new Employee("Іван", 4000, "Розробка", "Інженер"));
+        company.addEmployee(new Employee("Марія", 4200, "Розробка", "Інженер"));
+
+        System.out.println("Усі працівники компанії:");
+        company.displayEmployees();
+
+        System.out.println("Загальна зарплата компанії: " + company.getTotalSalary());
+        System.out.println("Середня зарплата: " + company.getAverageSalary());
+
+        company.removeEmployee("Іван");
+        System.out.println("Після видалення працівника:");
+        company.displayEmployees();
+
     }
     public static void ffff(){
         System.out.println("==========================================");
